@@ -1,3 +1,6 @@
+import 'dart:math';
+
+import 'package:cara_coroa/game_page.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
@@ -9,7 +12,14 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> {
 
-  _exibirResultado(){}
+  _exibirResultado(){
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => Gamepage(resultado: Random().nextInt(2))
+        )
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +32,6 @@ class _HomepageState extends State<Homepage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Image.asset("images/logo.png"),
-            SizedBox(child: Container(height: 25)),
             GestureDetector(
               onTap: _exibirResultado,
               child: Image.asset("images/botao_jogar.png"),

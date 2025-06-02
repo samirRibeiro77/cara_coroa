@@ -1,4 +1,4 @@
-import 'package:cara_coroa/HomePage.dart';
+import 'package:cara_coroa/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
